@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\EmployeesRequest;
 use App\Models\Companies;
 use App\Models\Employee;
-use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
 {
@@ -14,7 +13,6 @@ class EmployeeController extends Controller
     {
         return view('Employees.index')->with(['employees' => Employee::all() ]);
     }
-
     function create()
     {
         $companies = Companies::all();
@@ -25,23 +23,21 @@ class EmployeeController extends Controller
         Employee::create([
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
-            'company_id' => $request->company_id, // Updated to company_id
+            'company_id' => $request->company_id,
             'email' => $request->email,
             'phone' => $request->phone,
         ]);
         return redirect()->route('employees.index');
     }
-
     function show($id)
     {
         $employee = Employee::findOrFail($id);
         return view('Employees.show', compact('employee'));
     }
-
     function edit($id)
     {
         $employee = Employee::findOrFail($id);
-        $companies = Companies::all(); // Pass companies if needed for dropdowns
+        $companies = Companies::all();
         return view('Employees.update', compact('employee', 'companies'));
     }
 
