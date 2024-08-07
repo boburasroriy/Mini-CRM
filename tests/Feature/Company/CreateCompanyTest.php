@@ -5,10 +5,6 @@ namespace Company;
 use App\Models\User;
 use Illuminate\Http\UploadedFile;
 use Tests\TestCase;
-
-
-
-
 class CreateCompanyTest extends TestCase
 {
     /**

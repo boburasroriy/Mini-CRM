@@ -8,11 +8,11 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div class="bg-blue-100 p-6 rounded-lg shadow-md text-center">
                 <h2 class="text-2xl font-bold mb-2">Total Companies</h2>
-                <p class="text-xl">150</p> <!-- Replace with dynamic data -->
+                <p class="text-xl">{{ $companies->count() }}</p> <!-- Replace with dynamic data -->
             </div>
             <div class="bg-green-100 p-6 rounded-lg shadow-md text-center">
                 <h2 class="text-2xl font-bold mb-2">Total Employees</h2>
-                <p class="text-xl">450</p> <!-- Replace with dynamic data -->
+                <p class="text-xl">{{ $employees->count() }}</p> <!-- Replace with dynamic data -->
             </div>
             <div class="bg-yellow-100 p-6 rounded-lg shadow-md text-center">
                 <h2 class="text-2xl font-bold mb-2">Recent Activity</h2>

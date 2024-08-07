@@ -24,7 +24,7 @@
 
                 <div class="mb-4">
                     <label for="company" class="block text-gray-700 font-bold mb-2">Company:<span class="text-red-500">*</span>:</label>
-                    <select id="company" name="company_id" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    <select id="company" name="company_id"  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                         <option value="">Select a Company</option>
                         @foreach($companies as $company)
                             <option value="{{ $company->id }}">{{ $company->name }}</option>
