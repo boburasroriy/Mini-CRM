@@ -6,14 +6,13 @@ use App\Models\Companies;
 use App\Models\User;
 use Illuminate\Http\UploadedFile;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+
 
 class ShowCompanyTest extends TestCase
 {
     /**
      * A basic feature test example.
      */
-
     public function test_view_company(): void
     {
         $admin = User::factory()->create(['is_admin' => true]);
